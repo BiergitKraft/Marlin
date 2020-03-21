@@ -31,7 +31,7 @@
 #define BOARD_INFO_NAME "RAMPS-FD v2"
 
 #ifndef E0_CS_PIN
-  #define E0_CS_PIN        69 // moved from A13 to A15 on v2.2, if not earlier
+  #define E0_CS_PIN        58 // moved from A13 to A15 on v2.2, if not earlier //Marius 21.03.2020
 #endif
 
 #include "pins_RAMPS_FD_V1.h"
@@ -44,7 +44,7 @@
 #define E2END 0xFFFF // 64K in a 24C512
 
 #ifndef PS_ON_PIN
-  #define PS_ON_PIN        12
+  #define PS_ON_PIN        53
 #endif
 
 #ifndef FILWIDTH_PIN
