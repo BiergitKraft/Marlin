@@ -2157,8 +2157,8 @@
    * Override default SPI pins for TMC2130, TMC2160, TMC2660, TMC5130 and TMC5160 drivers here.
    * The default pins can be found in your board's pins file.
    */
-  #define X_CS_PIN          69  //Marius 21.03.2020
-  #define Y_CS_PIN          61  //Marius 21.03.2020
+  //#define X_CS_PIN          69  //Marius 21.03.2020
+  //#define Y_CS_PIN          61  //Marius 21.03.2020
   //#define Z_CS_PIN          -1
   //#define X2_CS_PIN         -1
   //#define Y2_CS_PIN         -1
@@ -2179,9 +2179,9 @@
    * but you can override or define them here.
    */
   #define TMC_USE_SW_SPI        //Marius 21.03.2020
-  #define TMC_SW_MOSI       51  //Marius 21.03.2020
-  #define TMC_SW_MISO       50  //Marius 21.03.2020
-  #define TMC_SW_SCK        52  //Marius 21.03.2020
+  //#define TMC_SW_MOSI       51  //Marius 21.03.2020
+  //#define TMC_SW_MISO       50  //Marius 21.03.2020
+  //#define TMC_SW_SCK        52  //Marius 21.03.2020
 
   /**
    * Four TMC2209 drivers can use the same HW/SW serial port with hardware configured addresses.
@@ -2317,12 +2317,12 @@
 
   #if EITHER(SENSORLESS_HOMING, SENSORLESS_PROBING)
     // TMC2209: 0...255. TMC2130: -64...63
-    #define X_STALL_SENSITIVITY  8
+    #define X_STALL_SENSITIVITY  7      //Marius 22.03.2020 6 < X < 8
     #define X2_STALL_SENSITIVITY X_STALL_SENSITIVITY
-    #define Y_STALL_SENSITIVITY  8
+    #define Y_STALL_SENSITIVITY  7      //Marius 22.03.2020
     //#define Z_STALL_SENSITIVITY  8
     //#define SPI_ENDSTOPS              // TMC2130 only
-    //#define IMPROVE_HOMING_RELIABILITY
+    #define IMPROVE_HOMING_RELIABILITY  //Marius 22.03.2020
   #endif
 
   /**
@@ -2335,7 +2335,7 @@
    * Enable M122 debugging command for TMC stepper drivers.
    * M122 S0/1 will enable continous reporting.
    */
-  //#define TMC_DEBUG
+  #define TMC_DEBUG
 
   /**
    * You can set your own advanced settings by filling in predefined functions.
