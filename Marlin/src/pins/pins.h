@@ -415,6 +415,8 @@
   #include "sam/pins_RAMPS_FD_V1.h"             // SAM3X8E                                env:DUE env:DUE_USB env:DUE_debug
 #elif MB(RAMPS_FD_V2)
   #include "sam/pins_RAMPS_FD_V2.h"             // SAM3X8E                                env:DUE env:DUE_USB env:DUE_debug
+#elif MB(RAMPS_FD_V3)
+  #include "sam/pins_RAMPS_FD_V3.h"
 #elif MB(RAMPS_SMART_EFB)
   #include "sam/pins_RAMPS_SMART.h"             // SAM3X8E                                env:DUE env:DUE_USB env:DUE_debug
 #elif MB(RAMPS_SMART_EEB)

@@ -163,8 +163,8 @@
   #define SD_DETECT_PIN    49
 
   #if ENABLED(NEWPANEL)
-    #define LCD_PINS_RS    16
-    #define LCD_PINS_ENABLE 17
+    #define LCD_PINS_RS    23
+    #define LCD_PINS_ENABLE 29
   #endif
 
   #if ENABLED(FYSETC_MINI_12864)
@@ -194,10 +194,10 @@
 
   #elif ENABLED(NEWPANEL)
 
-    #define LCD_PINS_D4    23
-    #define LCD_PINS_D5    25
-    #define LCD_PINS_D6    27
-    #define LCD_PINS_D7    29
+    #define LCD_PINS_D4    27
+    #define LCD_PINS_D5    14
+    #define LCD_PINS_D6    25
+    #define LCD_PINS_D7    15
 
     #if ENABLED(MINIPANEL)
       #define DOGLCD_CS    25

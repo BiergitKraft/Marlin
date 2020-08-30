@@ -50,3 +50,15 @@
 #ifndef FILWIDTH_PIN
   #define FILWIDTH_PIN      5   // Analog Input on AUX2
 #endif
+
+#if HAS_SPI_LCD
+
+  #if ANY(RADDS_DISPLAY, REPRAP_DISCOUNT_SMART_CONTROLLER, REPRAP_DISCOUNT_FULL_GRAPHIC_SMART_CONTROLLER)
+    //#define BEEPER_PIN      37
+    #define LCD_PINS_D4     27
+    #define LCD_PINS_D5     14
+    #define LCD_PINS_D6     25
+    #define LCD_PINS_D7     15
+    //#define SD_DETECT_PIN   51
+  #endif
+#endif
