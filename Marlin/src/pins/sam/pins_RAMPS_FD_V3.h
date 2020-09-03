@@ -156,19 +156,19 @@
 // LCD / Controller
 //Use RAMPS FD LCD Adapter V1.0 or later
 //
-#if HAS_SPI_LCD
+//#if HAS_SPI_LCD
 
-  #if ANY(RADDS_DISPLAY, REPRAP_DISCOUNT_SMART_CONTROLLER, REPRAP_DISCOUNT_FULL_GRAPHIC_SMART_CONTROLLER)
+#if ANY(RADDS_DISPLAY, REPRAP_DISCOUNT_SMART_CONTROLLER, REPRAP_DISCOUNT_FULL_GRAPHIC_SMART_CONTROLLER)
     #define BEEPER_PIN      37
     #define LCD_PINS_D4     27
     #define LCD_PINS_D5     14
     #define LCD_PINS_D6     25
     #define LCD_PINS_D7     15
-    #define SD_DETECT_PIN   51
+    #define SD_DETECT_PIN   49 
     #define LCD_PINS_RS     23
     #define LCD_PINS_ENABLE 29
-  #endif
 #endif
+//#endif
 
 #if HAS_TMC220x
   /**
