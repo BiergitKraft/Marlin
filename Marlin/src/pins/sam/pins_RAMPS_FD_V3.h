@@ -27,7 +27,7 @@
  * Use 4k7 thermistor tables
  */
 
-#ifndef __SAM3X8E__
+#if NOT_TARGET(__SAM3X8E__)
   #error "Oops! Select 'Arduino Due' in 'Tools > Board.'"
 #endif
 
@@ -40,6 +40,7 @@
 //
 #define I2C_EEPROM
 #define E2END 0xFFFF // 64K in a 24C512
+#define MARLIN_EEPROM_SIZE 512
 
 //Marius 21.03.2020
 #ifndef TMC_SW_MOSI
