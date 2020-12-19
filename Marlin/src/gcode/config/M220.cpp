@@ -16,7 +16,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  *
  */
 
@@ -30,7 +30,7 @@
  *   S<percent> : Set the feed rate percentage factor
  *
  * Report the current speed percentage factor if no parameter is specified
- * 
+ *
  * With PRUSA_MMU2...
  *   B : Flag to back up the current factor
  *   R : Flag to restore the last-saved factor

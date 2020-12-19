@@ -16,7 +16,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  *
  */
 #pragma once
@@ -122,6 +122,8 @@ public:
   static void write(const uint8_t c);
   static void flushTX();
 
+  static inline bool emergency_parser_enabled() { return Cfg::EMERGENCYPARSER; }
+
   FORCE_INLINE static uint8_t dropped() { return Cfg::DROPPED_RX ? rx_dropped_bytes : 0; }
   FORCE_INLINE static uint8_t buffer_overruns() { return Cfg::RX_OVERRUNS ? rx_buffer_overruns : 0; }
   FORCE_INLINE static uint8_t framing_errors() { return Cfg::RX_FRAMING_ERRORS ? rx_framing_errors : 0; }
@@ -172,13 +174,9 @@ struct MarlinSerialCfg {
 };
 
 #if SERIAL_PORT >= 0
-
   extern MarlinSerial<MarlinSerialCfg<SERIAL_PORT>> customizedSerial1;
+#endif
 
-#endif // SERIAL_PORT >= 0
-
-#ifdef SERIAL_PORT_2
-
+#if defined(SERIAL_PORT_2) && SERIAL_PORT_2 >= 0
   extern MarlinSerial<MarlinSerialCfg<SERIAL_PORT_2>> customizedSerial2;
-
 #endif
