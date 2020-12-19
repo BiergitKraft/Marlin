@@ -119,6 +119,13 @@
   #define E1_CS_PIN        59 //Marius 21.03.2020
 #endif
 
+#define Z2_STEP_PIN        43
+#define Z2_DIR_PIN         41
+#define Z2_ENABLE_PIN      39
+#ifndef Z2_CS_PIN
+  #define Z2_CS_PIN        59 //Marius 21.03.2020
+#endif
+
 #define E2_STEP_PIN        32
 #define E2_DIR_PIN         47
 #define E2_ENABLE_PIN      45
@@ -177,15 +184,15 @@
    * Hardware serial communication ports.
    * If undefined software serial is used according to the pins below
    */
-  #define X_HARDWARE_SERIAL  Serial1
+  //#define X_HARDWARE_SERIAL  Serial1
   //#define X2_HARDWARE_SERIAL Serial1
-  #define Y_HARDWARE_SERIAL  Serial1
+  //#define Y_HARDWARE_SERIAL  Serial1
   //#define Y2_HARDWARE_SERIAL Serial1
   #define Z_HARDWARE_SERIAL  Serial1
-  //#define Z2_HARDWARE_SERIAL Serial1
-  #define E0_HARDWARE_SERIAL Serial2
-  #define E1_HARDWARE_SERIAL Serial2
-  #define E2_HARDWARE_SERIAL Serial2
+  #define Z2_HARDWARE_SERIAL Serial2
+  //#define E0_HARDWARE_SERIAL Serial2
+  //#define E1_HARDWARE_SERIAL Serial2
+  //#define E2_HARDWARE_SERIAL Serial2
   //#define E3_HARDWARE_SERIAL Serial1
   //#define E4_HARDWARE_SERIAL Serial1
 #endif
